@@ -8,6 +8,8 @@ FROM amazon/aws-cli:latest
 
 LABEL maintainer "Yersa Nordman <yersa@finwo.nl> (https://finwo.nl/)"
 
+ENV DOCKER_HOST="tcp://docker:2376"
+
 ENTRYPOINT ["/usr/bin/bash", "-l", "-c"]
 
 COPY --from=0 /docker/docker /usr/local/bin
